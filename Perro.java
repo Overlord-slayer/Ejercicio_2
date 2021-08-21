@@ -29,7 +29,60 @@ public class Perro {
         this.edad = edad;
         this.salud = salud;
         this.nombre = nombre;
+    }
 
+    /**
+     * Getter que devuelve la raza del perro.
+     * 
+     * @return raza: String
+     */
+    public String raza_perro() {
+        return raza;
+    }
+
+    /**
+     * Getter que devuelve el color del perro.
+     * 
+     * @return color: String
+     */
+    public String color_perro() {
+        return color;
+    }
+
+    /**
+     * Getter que devuelve el nombre del perro.
+     * 
+     * @return nombre: String
+     */
+    public String nombre_perro() {
+        return nombre;
+    }
+
+    /**
+     * Getter que devuelve el tamaño del perro.
+     * 
+     * @return tamanio: String
+     */
+    public String tamanio_perro() {
+        return tamanio;
+    }
+
+    /**
+     * Getter que devuelve la salud del perro.
+     * 
+     * @return salud: int
+     */
+    public int salud_perro() {
+        return salud;
+    }
+
+    /**
+     * Getter que devuelve la edad del perro.
+     * 
+     * @return edad: int
+     */
+    public int edad_perro() {
+        return edad;
     }
 
 }

@@ -1,3 +1,5 @@
+import javax.swing.text.StyledEditorKit.FontFamilyAction;
+
 public class Principal {
     public static void main(String[] args) {
         Interaccion vista = new Interaccion();
@@ -19,6 +21,8 @@ public class Principal {
                     break;
                 case 4:
                     // Listar Familias.
+                    Familia familiares = new Familia();
+                    familiares.mostrar_familia();
                     break;
                 case 5:
                     // Listar Perros.
@@ -28,7 +32,7 @@ public class Principal {
                     vista.despedida();
                     break;
                 default:
-
+                    vista.opcion_invalida();
             }
 
         }

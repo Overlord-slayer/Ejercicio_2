@@ -20,4 +20,7 @@ public class Perrera {
 
     }
 
+    public String perro_perrera() {
+        return "modificar";
+    }
 }
