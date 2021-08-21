@@ -34,9 +34,8 @@ public class Interaccion {
         System.out.println("1. Ingresar nueva familia.");
         System.out.println("2. Recibir perro.");
         System.out.println("3. Asignar perro a familia.");
-        System.out.println("4. Listar Familias.");
-        System.out.println("5. Listar Perros.");
-        System.out.println("6. Salir.");
+        System.out.println("4. Listar perros.");
+        System.out.println("5. Salir.");
         byte opcion = entrada.nextByte();
         return (opcion);
     }
@@ -55,4 +54,7 @@ public class Interaccion {
         System.out.println("Gracias por utilizar el sistema, ¡Feliz día!");
     }
 
+    public void peligrosos() {
+        System.out.println("A continuacion, se presentan las razas consideradas peligrosas.");
+    }
 }

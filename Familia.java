@@ -1,5 +1,5 @@
 /**
- * Clase que da la funcion de las familias en la perrera.
+ * Clase MODELO que da la funcion de las familias en la perrera.
  */
 public class Familia {
     private String[] familia = { "Argueta", "Aguilar", "Mendoza" };
@@ -23,8 +23,8 @@ public class Familia {
      */
     public Familia(String apellido, int integrantes, int ninios) {
         this.familia[familia.length] = apellido;
-        this.cantidad_miembros[cantidad_miembros.length - 1] = integrantes;
-        this.cantidad_ninios[cantidad_ninios.length - 1] = ninios;
+        this.cantidad_miembros[cantidad_miembros.length] = integrantes;
+        this.cantidad_ninios[cantidad_ninios.length] = ninios;
     }
 
     /**

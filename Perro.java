@@ -1,5 +1,5 @@
 /**
- * Clase donde se describe el tipo de perro que ha llegado a la perrera.
+ * Clase MODELO donde se describe el tipo de perro que ha llegado a la perrera.
  * 
  * @author Josúe Samuel Argueta Hernández
  */
@@ -8,8 +8,8 @@ public class Perro {
     private String raza;
     private String nombre;
     private String tamanio;
-    private int salud;
-    private int edad;
+    private String salud;
+    private String edad;
 
     /**
      * Constructor que crea un nuevo perro segun los datos ingresados por el
@@ -22,7 +22,7 @@ public class Perro {
      * @param salud:   int
      * @param nombre:  String
      */
-    public Perro(String tamanio, String raza, String color, int edad, int salud, String nombre) {
+    public Perro(String tamanio, String raza, String color, String edad, String salud, String nombre) {
         this.tamanio = tamanio;
         this.raza = raza;
         this.color = color;
@@ -36,7 +36,7 @@ public class Perro {
      * 
      * @return raza: String
      */
-    public String raza_perro() {
+    public String raza_perro(String nomnbre) {
         return raza;
     }
 
@@ -72,7 +72,7 @@ public class Perro {
      * 
      * @return salud: int
      */
-    public int salud_perro() {
+    public String salud_perro() {
         return salud;
     }
 
@@ -81,7 +81,7 @@ public class Perro {
      * 
      * @return edad: int
      */
-    public int edad_perro() {
+    public String edad_perro() {
         return edad;
     }
 
