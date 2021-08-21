@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -10,14 +9,25 @@ public class Interaccion {
     // Se agrega esta propiedad para generlaizar Scanner
     private Scanner entrada;
 
-    private Interaccion() {
+    /**
+     * Constructor que instancia Scanner
+     */
+    public Interaccion() {
         entrada = new Scanner(System.in);
     }
 
+    /**
+     * Mensaje de bienvenida para el usuario
+     */
     public void bienvenida() {
         System.out.println("Bienvenido al sistema de distribucion para perros abandondos.");
     }
 
+    /**
+     * Menu de opciones para el usuario
+     * 
+     * @return opcion: byte
+     */
     public byte menu() {
         System.out.println("¿Qué desea hacer?");
         // Se modificio Crea nueva familia por Ingresar nueva familia.
@@ -31,10 +41,16 @@ public class Interaccion {
         return (opcion);
     }
 
+    /**
+     * Mensaje de error por dato fuera de las opciones del menu.
+     */
     public void opcion_invalida() {
         System.out.println("Debe seleccionar una de las opciones del menu.");
     }
 
+    /**
+     * Mensaje de despdida para el usuario.
+     */
     public void despedida() {
         System.out.println("Gracias por utilizar el sistema, ¡Feliz día!");
     }
