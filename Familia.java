@@ -2,16 +2,7 @@
  * Clase MODELO que da la funcion de las familias en la perrera.
  */
 public class Familia {
-    private String[] familia = { "Argueta", "Aguilar", "Mendoza" };
-    private int[] cantidad_miembros = { 4, 2, 5 };
-    private int[] cantidad_ninios = { 2, 0, 3 };
-
-    /**
-     * Contructor para poder tener acceso a los metodos de la clase.
-     */
-    public Familia() {
-        /* Se agrega esta método al diseño */
-    }
+    private String[][] familia;
 
     /**
      * Contructor que agrega los valore necesarios en las listas, segun sea
@@ -21,10 +12,17 @@ public class Familia {
      * @param integrantes: int
      * @param ninios:      int
      */
-    public Familia(String apellido, int integrantes, int ninios) {
-        this.familia[familia.length] = apellido;
-        this.cantidad_miembros[cantidad_miembros.length] = integrantes;
-        this.cantidad_ninios[cantidad_ninios.length] = ninios;
+    public Familia() {
+        familia = new String[15][3];
+        familia[0][0] = "Argueta";
+        familia[1][0] = "Alburez";
+        familia[2][0] = "Mendoza";
+        familia[0][1] = "2";
+        familia[1][1] = "4";
+        familia[2][1] = "3";
+        familia[0][2] = "0";
+        familia[1][2] = "2";
+        familia[2][2] = "1";
     }
 
     /**
@@ -33,12 +31,17 @@ public class Familia {
     public void mostrar_familia() {
         System.out.println("Apellidos       Cantidad de miembros    Cantidad de niños");
         for (int i = 0; i < familia.length; i++) {
-            System.out.println(familia[i] + "                 " + cantidad_miembros[i] + "                      "
-                    + cantidad_ninios[i]);
+            for (int j = 0; j < familia.length; j++) {
+                if ((familia[i] != null) && (familia[i][j] != null)) {
+                    System.out.println(familia[i][0] + "                 " + familia[i][1] + "                      "
+                            + familia[i][2]);
+                } else {
+                    break;
+                }
+            }
         }
     }
 
     public void buscar_optimo() {
     }
-
 }

@@ -10,6 +10,7 @@ public class Interaccion {
     // Se agrega esta propiedad para generlaizar Scanner
     private Scanner entrada;
     private Perrera perro = new Perrera();
+    private Familia familia = new Familia();
 
     /**
      * Constructor que instancia Scanner
@@ -36,18 +37,17 @@ public class Interaccion {
     }
 
     public void datos_familia() {
-        String raza = JOptionPane.showInputDialog(
-                "Ingrese la raza del perro, si no es una de las razas conocidas, ingresar la palabra Metizo: ");
-        String color = JOptionPane.showInputDialog("Ingrese el color del perro: ");
-        String tamanio = JOptionPane.showInputDialog("Ingrese el tamaño del perro (grande, mediano, pequeño): ");
+        String apellido = JOptionPane.showInputDialog("Ingrese el apellido de la familia: ");
+        int integrantes = Integer
+                .parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de integrantes que conforma la familia: "));
+        int ninio = Integer
+                .parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de ninios que hay en la familia: "));
 
-        String edad = JOptionPane.showInputDialog("Ingrese la edad del perro 0-20: ");
-        String salud = JOptionPane.showInputDialog("Ingrese la salud del perro en el rango de 0-100: ");
+        Familia familia = new Familia();
+    }
 
-        String nombre = JOptionPane.showInputDialog("Ingrese el nombre que le pondra al perro: ");
-
-        Perro nuevo_perro = new Perro(tamanio, raza, color, edad, salud, nombre);
-        perro.registro_perros(nombre, raza, tamanio, color, edad, salud);
+    public void listado_familias() {
+        familia.mostrar_familia();
     }
 
     /**

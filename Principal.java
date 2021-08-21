@@ -17,7 +17,7 @@ public class Principal {
 
         vista.bienvenida();
         byte opcion = 0;
-        while (opcion != 5) {
+        while (opcion != 6) {
             opcion = vista.menu();
 
             switch (opcion) {
@@ -39,6 +39,10 @@ public class Principal {
                     vista.lista_perros();
                     break;
                 case 5:
+                    // Listar familias
+                    vista.listado_familias();
+                    break;
+                case 6:
                     // Cerrar el programa.
                     vista.despedida();
                     break;
