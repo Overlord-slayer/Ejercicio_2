@@ -82,6 +82,9 @@ public class Interaccion {
         familia.mostrar_familia();
     }
 
+    /**
+     * busqueda de las familais segun su categorias
+     */
     public void asignacion() {
         familia.familias_mayores();
         familia.familias_menores();
