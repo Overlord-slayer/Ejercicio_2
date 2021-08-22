@@ -104,4 +104,64 @@ public class Familia {
         z++;
     }
 
+    public void familias_menores() {
+        System.out.println("Apellidos       Cantidad de miembros    Cantidad de niños");
+
+        // Ciclo para recorrer todos los reglones de la matriz
+        for (int i = 0; i < menores.length; i++) {
+            // Cantidad de veces que se mostrar una respuesta . En este caso, solo se desea
+            // mostrar 1 vez
+            for (int j = 0; j < 1; j++) {
+                // Verificacion si hay null en una matriz, de haberlo, no se imprime;
+                if ((menores[i] != null) && (menores[i][j] != null)) {
+                    System.out.println(menores[i][0] + "                 " + menores[i][1] + "                      "
+                            + menores[i][2]);
+                } else {
+                    continue;
+                }
+            }
+        }
+        System.out.println("");
+    }
+
+    public void familias_mayores() {
+        System.out.println("Apellidos       Cantidad de miembros    Cantidad de niños");
+
+        // Ciclo para recorrer todos los reglones de la matriz
+        for (int i = 0; i < mayores.length; i++) {
+            // Cantidad de veces que se mostrar una respuesta . En este caso, solo se desea
+            // mostrar 1 vez
+            for (int j = 0; j < 1; j++) {
+                // Verificacion si hay null en una matriz, de haberlo, no se imprime;
+                if ((mayores[i] != null) && (mayores[i][j] != null)) {
+                    System.out.println(mayores[i][0] + "                 " + mayores[i][1] + "                      "
+                            + mayores[i][2]);
+                } else {
+                    continue;
+                }
+            }
+        }
+        System.out.println("");
+    }
+
+    public void familias_ninguno() {
+        System.out.println("Apellidos       Cantidad de miembros    Cantidad de niños");
+
+        // Ciclo para recorrer todos los reglones de la matriz
+        for (int i = 0; i < ninguno.length; i++) {
+            // Cantidad de veces que se mostrar una respuesta . En este caso, solo se desea
+            // mostrar 1 vez
+            for (int j = 0; j < 1; j++) {
+                // Verificacion si hay null en una matriz, de haberlo, no se imprime;
+                if ((ninguno[i] != null) && (ninguno[i][j] != null)) {
+                    System.out.println(ninguno[i][0] + "                 " + ninguno[i][1] + "                      "
+                            + ninguno[i][2]);
+                } else {
+                    continue;
+                }
+            }
+        }
+        System.out.println("");
+    }
+
 }

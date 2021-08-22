@@ -83,7 +83,9 @@ public class Interaccion {
     }
 
     public void asignacion() {
-
+        familia.familias_mayores();
+        familia.familias_menores();
+        familia.familias_ninguno();
     }
 
     /**
