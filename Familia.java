@@ -4,6 +4,7 @@
  */
 public class Familia {
     private String[][] familia;
+    private int i = 0;
 
     /**
      * Contructor que agrega los valore necesarios en las listas, segun sea
@@ -52,10 +53,34 @@ public class Familia {
         System.out.println("");
     }
 
-    public void agregar_familia() {
-
+    /**
+     * Setter que agrega la inforamcion de las familias con menores de 10 años
+     */
+    public void agregar_familia_menores(String apellido, String integrantes, String menores) {
+        familia[i][0] = apellido;
+        familia[i][1] = integrantes;
+        familia[i][2] = menores;
+        i++;
     }
 
-    public void buscar_optimo() {
+    /**
+     * Setter que agrega la informacion de las familias con mayores de 10 años
+     */
+    public void agragar_familia_mayores(String apellido, String integrantes, String mayores) {
+        familia[i][0] = apellido;
+        familia[i][1] = integrantes;
+        familia[i][2] = mayores;
+        i++;
     }
+
+    /**
+     * Setter que agrea la informacion de las familias que no tiene niños
+     */
+    public void agregar_familia_ningun(String apellido, String integrantes, String ninguno) {
+        familia[i][0] = apellido;
+        familia[i][1] = integrantes;
+        familia[i][2] = ninguno;
+        i++;
+    }
+
 }

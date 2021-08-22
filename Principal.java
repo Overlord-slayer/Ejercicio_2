@@ -33,6 +33,7 @@ public class Principal {
                     break;
                 case 3:
                     // Asignar perro.
+
                     break;
                 case 4:
                     // listar perros.
