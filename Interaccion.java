@@ -43,27 +43,30 @@ public class Interaccion {
                 .showInputDialog("Ingrese la cantidad de integrantes que conforma la familia: ");
 
         String pregunta1 = JOptionPane.showInputDialog("¿Posee niños menores a 10 años?").toLowerCase();
-        if (pregunta1 == "si") {
-            String menores_10 = JOptionPane.showInputDialog("Ingrese la cantidad de ninios que hay en la familia: ");
-            familia.agregar_familia_menores(apellido, integrantes, menores_10);
-        } else if (pregunta1 == "no") {
 
-            String pregunta2 = JOptionPane.showInputDialog("¿Posee niños mayores a 10 años?").toLowerCase();
-            if (pregunta2 == "si") {
-                String mayores_10 = JOptionPane
-                        .showInputDialog("Ingrese la cantiadad de niños que hay en la familia: ");
-                familia.agragar_familia_mayores(apellido, integrantes, mayores_10);
-
-            } else if (pregunta2 == "no") {
-                String ninios = "0";
-                familia.agregar_familia_ningun(apellido, integrantes, ninios);
-            } else {
-                System.out.println("Pregunta 2 " + pregunta2);
+        switch (pregunta1) {
+            case "si":
+                String menores_10 = JOptionPane.showInputDialog("Ingrese la cantidad de niños");
+                familia.agregar_familia_menores(apellido, integrantes, menores_10);
+                break;
+            case "no":
+                String pregunta2 = JOptionPane.showInputDialog("¿Posee niños mayores a 10 años?").toLowerCase();
+                switch (pregunta2) {
+                    case "si":
+                        String mayores_10 = JOptionPane
+                                .showInputDialog("Ingrese la cantiadad de niños que hay en la familia: ");
+                        familia.agragar_familia_mayores(apellido, integrantes, mayores_10);
+                        break;
+                    case "no":
+                        String ninios = "0";
+                        familia.agregar_familia_ningun(apellido, integrantes, ninios);
+                        break;
+                    default:
+                        System.out.println("Vuelva a ingresar los datos");
+                }
+                break;
+            default:
                 System.out.println("Vuelva a ingresar los datos");
-            }
-        } else {
-            System.out.println("Pregunta 1 " + pregunta1);
-            System.out.println("Vuelva a ingresar los datos");
         }
 
         // Familia familia = new Familia();

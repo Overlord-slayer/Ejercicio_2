@@ -21,11 +21,6 @@ public class Perrera {
 
     }
 
-    public String perro_perrera() {
-
-        return "modificar";
-    }
-
     /**
      * Getter que lista las razas consideras como peligrosas
      */
@@ -36,6 +31,9 @@ public class Perrera {
         System.out.println("");
     }
 
+    /**
+     * perros que han llegado a la perrera.
+     */
     public void registro_perros(String nombre, String raza, String tamanio, String color, String edad, String salud) {
         perros_ingresados[i][0] = nombre;
         perros_ingresados[i][1] = raza;
@@ -47,6 +45,9 @@ public class Perrera {
 
     }
 
+    /**
+     * Mostrar los perros que estan en la perrera.
+     */
     public void perros_ingresados() {
         // Ciclo para recorrer todos los reglones de la matriz
         for (int i = 0; i < perros_ingresados.length; i++) {

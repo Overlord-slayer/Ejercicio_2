@@ -33,7 +33,7 @@ public class Principal {
                     break;
                 case 3:
                     // Asignar perro.
-                    vista.asignacion();
+
                     break;
                 case 4:
                     // listar perros.
