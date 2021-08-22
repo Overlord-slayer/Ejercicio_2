@@ -73,6 +73,10 @@ public class Interaccion {
         familia.mostrar_familia();
     }
 
+    public void asignacion() {
+
+    }
+
     /**
      * Informacion del perro que llega a la perrera
      */
