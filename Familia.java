@@ -4,7 +4,7 @@
  */
 public class Familia {
     private String[][] familias;
-    private String[][] menores = new String[12][3];
+    private String[][] menores;
     private String[][] mayores;
     private String[][] ninguno;
     private int i = 3;

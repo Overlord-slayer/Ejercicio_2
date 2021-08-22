@@ -34,9 +34,7 @@ public class Principal {
                     break;
                 case 3:
                     // Asignar perro.
-                    familia.familias_mayores();
-                    familia.familias_menores();
-                    familia.familias_ninguno();
+                    opcion_3();
                     break;
                 case 4:
                     // listar perros.
@@ -98,6 +96,9 @@ public class Principal {
         }
     }
 
+    /**
+     * Este metodo realiza las operaciones necesarias para la informacion del perro
+     */
     private static void opcion_2() {
         String raza = vista.raza_perro();
 
@@ -129,5 +130,13 @@ public class Principal {
             }
         }
 
+    }
+
+    /**
+     * Este metodo supondria una respuesta para la asignacion de los perros
+     */
+    private static void opcion_3() {
+        vista.busqueda();
+        familia.mostrar_familia();
     }
 }

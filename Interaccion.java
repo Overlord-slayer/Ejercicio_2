@@ -28,7 +28,7 @@ public class Interaccion {
         // Se modificio Crea nueva familia por Ingresar nueva familia.
         System.out.println("1. Ingresar nueva familia.");
         System.out.println("2. Recibir perro.");
-        System.out.println("3. Asignar perro a familia.");
+        System.out.println("3. ver asignaciones.");
         System.out.println("4. Listar perros.");
         System.out.println("5. Listar familias.");
         System.out.println("6. Salir.");
@@ -171,6 +171,10 @@ public class Interaccion {
      */
     public void rango_salud() {
         System.out.println("Debe ingresar un valor entre 0 y 100");
+    }
+
+    public void busqueda() {
+        System.out.println("A continuacion se muestran los perros que se han asignado");
     }
 
     /**
