@@ -160,6 +160,20 @@ public class Interaccion {
     }
 
     /**
+     * metodo que muestra el rango de edad del perro
+     */
+    public void rango_edad() {
+        System.out.println("Debe ingresar un valor entre 1 a 20");
+    }
+
+    /**
+     * metodo que muestra el rango de salud del perro
+     */
+    public void rango_salud() {
+        System.out.println("Debe ingresar un valor entre 0 y 100");
+    }
+
+    /**
      * Mensaje de bienvenida para el usuario
      */
     public void bienvenida() {

@@ -111,16 +111,16 @@ public class Principal {
                 String salud = vista.salud_perro();
                 int edad_dato = Integer.parseInt(edad);
                 int salud_dato = Integer.parseInt(salud);
-                if ((edad_dato < 0) || (edad_dato > 20)) {
+                if ((edad_dato < 1) || (edad_dato > 20)) {
+                    vista.rango_edad();
+                } else {
                     if ((salud_dato < 0) || (salud_dato > 100)) {
-                        System.out.println("Debe ingresar un valor entre 0 y 100");
+                        vista.rango_salud();
                     } else {
                         Perro nuevo_perro = new Perro(tamanio, raza, color, edad, salud, nombre);
                         perro.registro_perros(nombre, raza, tamanio, color, edad, salud);
                         bandera = false;
                     }
-                } else {
-                    break;
                 }
 
             } catch (NumberFormatException e) {
