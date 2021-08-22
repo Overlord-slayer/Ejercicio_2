@@ -31,19 +31,44 @@ public class Interaccion {
         System.out.println("2. Recibir perro.");
         System.out.println("3. Asignar perro a familia.");
         System.out.println("4. Listar perros.");
-        System.out.println("5. Salir.");
+        System.out.println("5. Listar familias.");
+        System.out.println("6. Salir.");
         byte opcion = entrada.nextByte();
         return (opcion);
     }
 
     public void datos_familia() {
-        String apellido = JOptionPane.showInputDialog("Ingrese el apellido de la familia: ");
-        int integrantes = Integer
-                .parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de integrantes que conforma la familia: "));
-        int ninio = Integer
-                .parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de ninios que hay en la familia: "));
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Ingrese el apellido de la familiar: ");
+        String apellido = entrada.nextLine();
 
-        Familia familia = new Familia();
+        String apellido = JOptionPane.showInputDialog("Ingrese el apellido de la familia: ");
+        String integrantes = JOptionPane
+                .showInputDialog("Ingrese la cantidad de integrantes que conforma la familia: ");
+
+        String pregunta1 = JOptionPane.showInputDialog("¿Posee niños menores a 10 años?").toLowerCase();
+
+        if (pregunta1 == "si") {
+            String menores_10 = JOptionPane.showInputDialog("Ingrese la cantidad de ninios que hay en la familia: ");
+        } else if (pregunta1 == "no") {
+
+            String pregunta2 = JOptionPane.showInputDialog("¿Posee niños mayores a 10 años?").toLowerCase();
+
+            if (pregunta2 == "si") {
+                String mayores_10 = JOptionPane
+                        .showInputDialog("Ingrese la cantiadad de niños que hay en la familia: ");
+            } else if (pregunta2 == "no") {
+                String ninios = "0";
+            } else {
+                System.out.println("Pregunta 2 " + pregunta2);
+                System.out.println("Vuelva a ingresar los datos");
+            }
+        } else {
+            System.out.println("Pregunta 1 " + pregunta1);
+            System.out.println("Vuelva a ingresar los datos");
+        }
+
+        // Familia familia = new Familia();
     }
 
     public void listado_familias() {

@@ -48,7 +48,7 @@ public class Perrera {
     }
 
     public void perros_ingresados() {
-        // Ciclo para recorrer todos los regloes de la matriz
+        // Ciclo para recorrer todos los reglones de la matriz
         for (int i = 0; i < perros_ingresados.length; i++) {
             // Cantidad de veces que se mostrar una respuesta . En este caso, solo se desea
             // mostrar 1 vez
