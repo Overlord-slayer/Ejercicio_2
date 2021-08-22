@@ -10,7 +10,6 @@ public class Interaccion {
     // Se agrega esta propiedad para generlaizar Scanner
     private Scanner entrada;
     private Perrera perro = new Perrera();
-    private Familia familia = new Familia();
 
     /**
      * Constructor que instancia Scanner
@@ -38,83 +37,126 @@ public class Interaccion {
     }
 
     /**
-     * Metodo que requiere informacion sobre la famlia.
+     * Apellido con el cual se identificara la familia
      */
-    public void datos_familia() {
+    public String apellido_familia() {
         String apellido = JOptionPane.showInputDialog("Ingrese el apellido de la familia: ");
+        return apellido;
+    }
+
+    /**
+     * Cantidad de miembros que hay en la familia.
+     */
+    public String ingtegrantes_familia() {
         String integrantes = JOptionPane
                 .showInputDialog("Ingrese la cantidad de integrantes que conforma la familia: ");
+        return integrantes;
+    }
 
+    /**
+     * Pregunta, en caso tenga niños menores de 10 años
+     * 
+     * @return pregunta1: String
+     */
+    public String respuesta1_familia() {
         String pregunta1 = JOptionPane.showInputDialog("¿Posee niños menores a 10 años?").toLowerCase();
-
-        switch (pregunta1) {
-            case "si":
-                String menores_10 = JOptionPane.showInputDialog("Ingrese la cantidad de niños");
-                familia.agregar_familia_menores(apellido, integrantes, menores_10);
-                break;
-            case "no":
-                String pregunta2 = JOptionPane.showInputDialog("¿Posee niños mayores a 10 años?").toLowerCase();
-                switch (pregunta2) {
-                    case "si":
-                        String mayores_10 = JOptionPane
-                                .showInputDialog("Ingrese la cantiadad de niños que hay en la familia: ");
-                        familia.agragar_familia_mayores(apellido, integrantes, mayores_10);
-                        break;
-                    case "no":
-                        String ninios = "0";
-                        familia.agregar_familia_ningun(apellido, integrantes, ninios);
-                        break;
-                    default:
-                        System.out.println("Vuelva a ingresar los datos");
-                }
-                break;
-            default:
-                System.out.println("Vuelva a ingresar los datos");
-        }
-
-        // Familia familia = new Familia();
+        return pregunta1;
     }
 
     /**
-     * Metodo que muestra las familias que estan en el registro local.
+     * Cantidad de niños menores de 10 años
+     * 
+     * @return menores_10: String
      */
-    public void listado_familias() {
-        familia.mostrar_familia();
+    public String menores_de10() {
+        String menores_10 = JOptionPane.showInputDialog("Ingrese la cantidad de niños");
+        return menores_10;
     }
 
     /**
-     * busqueda de las familais segun su categorias
+     * Pregunta en caso no posee niños menores de 10 años
+     * 
+     * @return pregunta2: String
      */
-    public void asignacion() {
-        familia.familias_mayores();
-        familia.familias_menores();
-        familia.familias_ninguno();
+    public String respuesta2_familia() {
+        String pregunta2 = JOptionPane.showInputDialog("¿Posee niños mayores a 10 años?").toLowerCase();
+        return pregunta2;
+    }
+
+    /**
+     * Cantidad de niños mayores de 10 años en la familia
+     * 
+     * @return mayores_10: String
+     */
+    public String mayores_de10() {
+        String mayores_10 = JOptionPane.showInputDialog("Ingrese la cantiadad de niños que hay en la familia: ");
+        return mayores_10;
+    }
+
+    /**
+     * respuesta mala del usuario
+     */
+    public void respustas_invalidas1() {
+        System.out.println("Vuelva a ingresar los datos");
+    }
+
+    /**
+     * Raza del perro que ingresa
+     * 
+     * @return raza: String
+     */
+    public String raza_perro() {
+        String raza = JOptionPane.showInputDialog(
+                "Ingrese la raza del perro, si no es una de las razas conocidas, ingresar la palabra Metizo: ");
+        return raza;
+    }
+
+    /**
+     * Color del perro que ingresa
+     * 
+     * @return color: String
+     */
+    public String color_perro() {
+        String color = JOptionPane.showInputDialog("Ingrese el color del perro: ");
+        return color;
+    }
+
+    /**
+     * Tamamnio del perro que ingresa
+     * 
+     * @return tamanio: String
+     */
+    public String tamanio_perro() {
+        String tamanio = JOptionPane.showInputDialog("Ingrese el tamaño del perro (grande, mediano, pequeño): ");
+        return tamanio;
+    }
+
+    /**
+     * edad del perro que ingresa
+     * 
+     * @return edad: String
+     */
+    public String edad_perro() {
+        String edad = JOptionPane.showInputDialog("Ingrese la edad del perro 0-20: ");
+        return edad;
+    }
+
+    /**
+     * estado de salud del perro que ingresa
+     */
+    public String salud_perro() {
+        String salud = JOptionPane.showInputDialog("Ingrese la salud del perro en el rango de 0-100: ");
+        return salud;
     }
 
     /**
      * Informacion del perro que llega a la perrera
+     * 
+     * @return nombre: String
      */
-    public void datos_perro() {
-        // Datos del perro
-        String raza = JOptionPane.showInputDialog(
-                "Ingrese la raza del perro, si no es una de las razas conocidas, ingresar la palabra Metizo: ");
-        String color = JOptionPane.showInputDialog("Ingrese el color del perro: ");
-        String tamanio = JOptionPane.showInputDialog("Ingrese el tamaño del perro (grande, mediano, pequeño): ");
-
-        String edad = JOptionPane.showInputDialog("Ingrese la edad del perro 0-20: ");
-        String salud = JOptionPane.showInputDialog("Ingrese la salud del perro en el rango de 0-100: ");
-
+    public String nombre_perro() {
         String nombre = JOptionPane.showInputDialog("Ingrese el nombre que le pondra al perro: ");
-
-        Perro nuevo_perro = new Perro(tamanio, raza, color, edad, salud, nombre);
-        perro.registro_perros(nombre, raza, tamanio, color, edad, salud);
-    }
-
-    /**
-     * Listado de los perros que fueron ingresados al sistema
-     */
-    public void lista_perros() {
-        perro.perros_ingresados();
+        return nombre;
     }
 
     /**
