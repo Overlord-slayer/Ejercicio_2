@@ -104,6 +104,9 @@ public class Familia {
         z++;
     }
 
+    /**
+     * Getter que devuelve todas las familias con niños menores a 10 años
+     */
     public void familias_menores() {
         System.out.println("Apellidos       Cantidad de miembros    Cantidad de niños");
 
@@ -124,6 +127,9 @@ public class Familia {
         System.out.println("");
     }
 
+    /**
+     * Getter que devuelve todas las familias con niños mayores a 10 años.
+     */
     public void familias_mayores() {
         System.out.println("Apellidos       Cantidad de miembros    Cantidad de niños");
 
@@ -144,6 +150,9 @@ public class Familia {
         System.out.println("");
     }
 
+    /**
+     * Getter que devuelve todas las familias con ningun niño
+     */
     public void familias_ninguno() {
         System.out.println("Apellidos       Cantidad de miembros    Cantidad de niños");
 
