@@ -37,6 +37,9 @@ public class Interaccion {
         return (opcion);
     }
 
+    /**
+     * Metodo que requiere informacion sobre la famlia.
+     */
     public void datos_familia() {
         String apellido = JOptionPane.showInputDialog("Ingrese el apellido de la familia: ");
         String integrantes = JOptionPane
@@ -72,6 +75,9 @@ public class Interaccion {
         // Familia familia = new Familia();
     }
 
+    /**
+     * Metodo que muestra las familias que estan en el registro local.
+     */
     public void listado_familias() {
         familia.mostrar_familia();
     }
